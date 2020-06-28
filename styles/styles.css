@@ -1,0 +1,267 @@
+body{
+    background: rgb(216, 216, 216);
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.5rem;
+    display: grid;
+}
+
+
+/* nav */
+
+nav{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 3rem;
+    padding: 0 4rem;
+    position: absolute;
+    width: 100%;
+    justify-self: center;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 10;
+}
+
+nav > a{
+    align-self: center;
+    padding: 0 0 0 2rem;
+}
+
+nav > ul{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-content: center;
+    justify-items: right;
+    list-style: none;
+    width: 90%;
+
+}
+
+nav a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+/* end nav */
+
+main{
+    display: grid;
+}
+
+/* slide */
+
+.sliderContainer{
+    display: grid;
+    grid-template-areas:
+        "slides"
+    ;
+    color: white;
+}
+
+.slides{
+    grid-area: slides;
+    display: grid;
+    grid-template-areas:
+        "content"
+    ;
+    width: 100%;
+    height: 80vh;
+    transition: all .7s;
+}
+
+.slides > img{
+    width: 100%;
+    height: 100%;
+    grid-area: content;
+}
+
+.slides > div{
+    grid-area: content;
+}
+
+.slides > div{
+    display: grid;
+    align-content: end;
+    justify-items: center;
+    padding: 3rem;
+    box-sizing: border-box;
+    background: rgba(111, 0, 255, 0.219);
+}
+
+.slides > div > h5{
+    margin: 0;
+    font-size: 3rem;
+}
+
+.slides > div > a{
+    text-decoration: none;
+    color: white;
+    width: 9rem;
+    height: 4rem;
+    background: black;
+    position: relative;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+
+
+
+/* slide animation */
+
+.opacity{
+    opacity: 0;
+}
+
+/* end slide animation */
+
+/* end slide */
+
+/* projects */
+
+.projectsContainer{
+    display: grid;
+    grid-template-areas: 
+        "title title"
+        "proj1 proj2"
+        "proj3 proj4"
+    ;
+    align-items: center;
+    justify-items: center;
+    gap: 2% 10%;
+}
+
+.projectsContainer > div > img{
+    width: 100%;
+}
+
+.projectsContainer > h2{
+    grid-area: title;
+}
+
+.projectsContainer > div{
+    display: grid;
+    width: 50%;
+    justify-items: center;
+    text-align: justify;
+}
+
+.projectsContainer > div:nth-child(2){
+    grid-area: proj1;
+    justify-self: end;
+
+}
+
+.projectsContainer > div:nth-child(3){
+    grid-area: proj2;
+    justify-self: start;
+}
+
+.projectsContainer > div:nth-child(4){
+    grid-area: proj3;
+    justify-self: end;
+
+}
+
+.projectsContainer > div:nth-child(5){
+    grid-area: proj4;
+    justify-self: start;
+
+}
+
+/* end .projects */
+
+/* contact */
+
+.contact{
+    justify-self: center;
+    margin: 10rem 0 3rem 0;
+    padding: 0 2rem;
+    background: rgb(83, 83, 122);
+    display: grid;
+    grid-template-areas: 
+        "contact contact"
+        "h51 p"
+        "h52 img"
+    ;
+    width: 50%;
+    gap: 0 2rem;
+    align-items: center;
+    border-radius: 50px;
+}
+
+.contact > h2{
+    grid-area: contact;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.contact > h5:nth-child(2){
+    grid-area: h51;
+    align-self: start;
+}
+
+.contact > p{
+    grid-area: p;
+
+}
+
+
+.contact > h5:nth-child(4){
+    grid-area: h52;
+
+}
+
+.contact > img{
+    grid-area: img;
+    width: 50%;
+
+
+}
+
+
+
+/* end contact */
+
+
+
+/* footer */
+
+
+footer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: end;
+    align-items: center;
+    color: white;
+    background: black;
+    padding: 1rem 4rem;
+}
+
+footer h5{
+    margin: 0;
+}
+
+footer > div > a{
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    transition: all .5s;
+    border-radius: 20px;
+}
+
+footer > div > a:hover{
+    color: black;
+    background: white;
+}
+
+footer > div{
+    grid-column: 1/3;
+    justify-self: start;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1rem;
+}
+
+
+/* end footer */
