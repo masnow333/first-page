@@ -1,17 +1,71 @@
 main{
     display: grid;
-    padding: 5rem;
     position: relative;
 }
 
 main > h1{
-    display: grid;
-    align-content: center;
-    justify-content: center;
+    text-align: center;
     font-size: 5rem;
-    position: absolute;
+    margin: 1rem;
+    margin-top: 4rem;
+    transition: all 1.5s;
+    text-shadow: 5px 2px 3px rgba(150, 150, 150, 1);
+}
+
+main > h1:hover{
+    transform: rotateY(360deg);
+}
+
+.wraper{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 22%);
+    margin: 2rem;
+    gap: 3rem 1rem;
 }
 
 .cards{
+    background: rgb(209, 196, 221);
+    display: grid;
+    border-radius: 5px;
+    transition: all .3s;
+}
 
+.cards:hover{
+    box-shadow: 0px 0px 14px 3px rgba(78, 1, 97, 0.4);
+}
+
+.cards > img{
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+
+.cards > div{
+    display: grid;
+    padding: .8rem;
+    align-items: center;
+}
+
+.cards > div > h5{
+    color: blue;
+    margin: 0;
+}
+
+.cards > div > p{
+    margin: 0;
+}
+
+.cards > div > a{
+    margin-top: 2rem;
+    width: 100%;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    background: rgb(161, 65, 250);
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all .3s;
+}
+
+.cards > div > a:hover{
+    background: rgb(67, 0, 252);
 }
