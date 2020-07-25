@@ -1,0 +1,26 @@
+body{
+    font-family: 'Orbitron', sans-serif;
+}
+
+nav{
+    position: fixed;
+    background: black;
+    padding: 1rem;
+    width: 15%;
+    right: -10rem;
+    top: 1rem;
+    transition: all .5s;
+    border-radius: 20px 0;
+    z-index: 100;
+}
+
+nav > a{
+    color: white;
+    text-decoration: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+nav:hover{
+    right: 0;
+}

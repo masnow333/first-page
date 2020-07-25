@@ -1,0 +1,304 @@
+/* main */
+
+main{
+    display: grid;
+}
+
+/* slide */
+
+.sliderContainer{
+    display: grid;
+    grid-template-areas:
+        "slides"
+    ;
+    color: white;
+}
+
+.slides{
+    grid-area: slides;
+    display: grid;
+    grid-template-areas:
+        "content"
+    ;
+    width: 100%;
+    height: 80vh;
+    transition: all .7s;
+}
+
+.slides > img{
+    width: 100%;
+    height: 100%;
+    grid-area: content;
+}
+
+.slides > div{
+    grid-area: content;
+}
+
+.slides > div{
+    display: grid;
+    align-content: end;
+    justify-items: center;
+    padding: 3rem;
+    box-sizing: border-box;
+    background: rgba(111, 0, 255, 0.219);
+}
+
+.slides > div > h5{
+    margin: 0;
+    font-size: 3rem;
+}
+
+.slideButton{
+    text-decoration: none;
+    color: white;
+    width: 9rem;
+    height: 4rem;
+    background: black;
+    position: relative;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    border-radius: 3px;
+}
+
+
+/* slide animation */
+
+.opacity{
+    opacity: 0;
+}
+
+/* end slide animation */
+
+/* end slide */
+
+/* projects */
+
+.projectsContainer{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 20%);
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    gap: 1rem;
+}
+
+.project > img{
+    box-sizing: content-box;
+    width: 100%;
+    border-radius: .3rem .3rem 0 0;
+}
+
+.projectsContainer > h2{
+    grid-column: 1/ 5;
+}
+
+.project{
+    display: grid;
+    width: 100%;
+    justify-items: center;
+    gap: 1rem;
+    background: rgb(189, 137, 209);
+    transition: all .3s;
+    border-radius: .3rem;
+}
+
+.project:hover{
+    box-shadow: 0px 0px 14px 3px rgba(78, 1, 97, 0.4);
+
+}
+
+.project > h5{
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.project > p{
+    margin: 0;
+    font-size: 1.2rem;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 7rem;
+    padding: 0 1rem;
+}
+
+.project > a{
+    margin-bottom: 1rem;
+    text-align: center;
+    padding: .1rem;
+    width: 90%;
+    border-radius: 3px;
+    text-decoration: none;
+    color: black;
+    background: blueviolet;
+    transition: all .3s;
+}
+
+.project > a:hover{
+    background: rgb(37, 53, 201);
+}
+
+/* end .projects */
+
+/* contact */
+
+.contact{
+    justify-self: center;
+    margin: 3rem 0;
+    padding: 0 2rem;
+    background: rgba(82, 82, 236, 0.774);
+    display: grid;
+    grid-template-areas: 
+        "contact contact"
+        "h51 p"
+        "h52 img"
+    ;
+    width: 50%;
+    gap: 0 2rem;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.contact > h2{
+    grid-area: contact;
+    text-align: center;
+    margin: 0;
+    margin-top: 2rem;
+}
+
+.contact > h5:nth-child(2){
+    grid-area: h51;
+    align-self: start;
+}
+
+.contact > p{
+    grid-area: p;
+
+}
+
+
+.contact > h5:nth-child(4){
+    grid-area: h52;
+
+}
+
+.contact > img{
+    grid-area: img;
+    width: 40%;
+
+
+}
+
+
+
+/* end contact */
+
+
+/* end main */
+
+
+
+
+
+
+
+/* media queries */
+
+
+@media screen and (max-width: 1000px){
+    
+    /* slider */
+
+    slides > div > h5{
+        font-size: 1rem;
+        text-align: center;
+    }
+
+
+    /* end slider */
+
+
+    /* contact */
+
+    .contact > img{
+        width: 70%;
+    }
+
+    /* end contact */
+
+}
+
+
+@media screen and (max-width: 700px){
+
+    /* contact */
+
+    .contact{
+        grid-template-areas: 
+            "contact"
+            "h51"
+            "p"
+            "h52"
+            "img"
+        ;
+
+        justify-items: center;
+
+        padding: 3rem;
+    }
+
+    .contact > h2{
+        margin: 0;
+    }
+
+
+    .contact > img{
+        width: 100%;
+    }
+
+    /* end contact */
+
+
+
+    /* projects */
+
+    .projectsContainer{
+        grid-template-areas: 
+
+            "title"
+            "proj1"
+            "proj2"
+            "proj3"
+            "proj4"
+
+        ;
+        padding-bottom: 3rem;
+    }
+    .projectsContainer > div:nth-child(2){
+        justify-self: center;
+    
+    }
+    
+    .projectsContainer > div:nth-child(3){
+        justify-self: center;
+    }
+    
+    .projectsContainer > div:nth-child(4){
+        justify-self: center;
+    
+    }
+    
+    .projectsContainer > div:nth-child(5){
+        justify-self: center;
+    
+    }
+
+    /* end projects */
+
+}
+
+
+/* end media queries */
