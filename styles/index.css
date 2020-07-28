@@ -135,6 +135,7 @@ main{
     color: black;
     background: blueviolet;
     transition: all .3s;
+    align-self: center;
 }
 
 .project > a:hover{

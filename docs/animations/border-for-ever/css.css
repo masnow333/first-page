@@ -50,36 +50,71 @@ body{
 
 main{
     display: grid;
-    align-content: center;
-    justify-content: center;
+    align-items: center;
     justify-items: center;
-    gap: 15rem;
-    padding: 4rem;
-    padding-top: 0em;
+    grid-template-rows: 0 100vh;
 }
 
-main > section > h2{
+.title{
+    width: 90%;
     font-size: 3.5rem;
+    text-align: center;
 }
 
 .content{
+    width: 80%;
+    padding: 4rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
     gap: 2rem;
     
 }
 
 main > section > div > img{
-    width: 70%;
+    width: 80%;
 }
 
 .content > div{
     display: grid;
     justify-content: center;
     justify-items: center;
+    gap: 1rem;
+}
+
+.content > div > a{
+    text-decoration: none;
+    text-align: center;
+    width: 80%;
+    background: purple;
+    border-radius: 5px;
+    color: wheat;
 }
 
 /* end main */
 
 
 
+/* media queries */
+
+@media screen and (max-width: 750px){
+    .title{
+        font-size: 2rem;
+    }
+
+    .content{
+        grid-template-columns: 80%;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .title{
+        font-size: 1.3rem;
+    }
+
+    .content{
+        grid-template-columns: 100%;
+    }
+}
+
+/* end media queries */

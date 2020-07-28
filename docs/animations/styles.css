@@ -7,7 +7,7 @@ nav{
     background: black;
     padding: 1rem;
     width: 15%;
-    right: -10rem;
+    right: -10%;
     top: 1rem;
     transition: all .5s;
     border-radius: 20px 0;
@@ -23,4 +23,18 @@ nav > a{
 
 nav:hover{
     right: 0;
+}
+
+@media screen and (max-width: 750px){
+    nav{
+        right: -18%;
+        width: 25%;
+    }
+}
+
+@media screen and (max-width: 400px){
+    nav{
+        right: -25%;
+        width: 40%;
+    }
 }

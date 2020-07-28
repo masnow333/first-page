@@ -80,4 +80,8 @@ main > h1:hover{
     .wraper{
         grid-template-columns: 80%;
     }
+
+    main > h1{
+        font-size: 3rem;
+    }
 }
