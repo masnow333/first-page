@@ -1,0 +1,30 @@
+.sliderContainer{
+    display: grid;
+}
+
+.imageContainer{
+    display: grid;
+    grid-template-columns: repeat(3, 100%);
+    img{
+        position: relative;
+        width: 100%;
+        height: 80vh;
+        animation: slide infinite 15s;
+    }
+}
+
+.textContainer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 100%;
+    height: 80vh;
+    position: absolute;
+    div{
+        grid-column: 2/3;
+        grid-row: 2/3;
+        display: grid;
+        justify-items: center;
+        align-content: center;
+    }
+}

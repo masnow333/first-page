@@ -1,0 +1,78 @@
+nav {
+  position: fixed;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  background: linear-gradient(0deg, rgba(50, 224, 196, 0) 0%, rgba(50, 224, 196, 0.5) 100%);
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+nav > a {
+  color: #222831;
+  text-decoration: none;
+  padding-left: 3rem;
+  width: auto;
+}
+nav > ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  list-style: none;
+  justify-items: center;
+}
+nav > ul a {
+  color: #222831;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+nav > ul a::after {
+  content: "";
+  height: 2px;
+  width: 0;
+  background: #222831;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: all 0.5s;
+}
+nav > ul a:hover::after {
+  width: 100%;
+}
+
+.sliderContainer {
+  display: grid;
+}
+
+.imageContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 100%);
+}
+.imageContainer img {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  animation: slide infinite 15s;
+}
+
+.textContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  width: 100%;
+  height: 80vh;
+  position: absolute;
+}
+.textContainer div {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+}
+
+body {
+  background: #eeeeee;
+}
+
+/*# sourceMappingURL=styles.css.map */
